@@ -6,7 +6,7 @@ import math, time
 
 start = time.time()
 n = int(input())
-m = math.floor(math.sqrt(n))
+m = int(math.sqrt(n))
 a = [50001 for i in range(n+1)]
 a[1] = 1
 
