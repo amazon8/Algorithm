@@ -10,7 +10,6 @@ for i in range(num):
     t.pop()
     t.reverse()
 
-print(t, s)
 # 비교
 if "".join(t)==s:
   print(1)
