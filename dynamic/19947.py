@@ -1,21 +1,15 @@
-money, year = map(int, input().split())
-num = [0 for i in range(3)]
-num[0] = year//5
-if num[0]!=0:
-  year = year//5
-num[1] = year//3
-if num[1]!=0:
-  year = year//3
-num[2] = year
+m, year = map(int, input().split())
+money = [0 for i in range(year+1)]
+money[0] = m 
 
-# 이자 추가
-for i in reversed(num):
-  for j in range(i):
-    if i == 2:
-      money += int(money*0.05)
-    elif i==1:
-      money += int(money*0.2)
-    else:
-      money += int(money*0.35)
+# 연도별 이자 추가
+for i in range(1, 6, 2):
+  for j in range(1, year+1):
+    if i == 1:
+      money[j] = max(money[j], int(money[j-i]*1.05))
+    elif i ==3 and j-i>=0:
+      money[j] = max(money[j], int(money[j-i]*1.2))
+    elif i==5 and j-i>=0:
+      money[j] = max(money[j], int(money[j-i]*1.35)) 
 
-print(money)
+print(money[year])
