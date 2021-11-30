@@ -1,7 +1,7 @@
 height = int(input()) 
 sum = [0 for i in range(height+1)]
 if height >= 1:
-  sum[1] = 1
+  sum[1] = 0
 if height >=2:
   sum[2] = 1
 if height >= 3:
