@@ -1,3 +1,8 @@
+'''
+1. 박스에서 큐브 만큼 뺀 후의 모양에 대한 식을 못 찾겠음...
+--> 다른 알고리즘으로 풀어야 할 듯!!
+'''
+
 import math
 
 length, wid, hei = map(int, input().split())
