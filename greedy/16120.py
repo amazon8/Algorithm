@@ -1,3 +1,8 @@
+'''
+1. 계속 시간 초과 뜸 ....
+--> replace 함수는 O(n)의 시간 복잡도를 가짐
+♨ 스택을 통해서 품
+'''
 import sys
 
 str = sys.stdin.readline()

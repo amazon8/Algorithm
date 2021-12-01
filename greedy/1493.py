@@ -13,7 +13,6 @@ for i in reversed(range(num)):
   cube_side = 2**cube[i][0]
   cube_vol = math.pow(cube_side, 3)
   if cube_side <= min(length, wid, hei):
-    print(i)
     if vol // cube_vol <= cube[i][1]:
       count += int(vol //cube_vol) 
       vol = vol % cube_vol 
