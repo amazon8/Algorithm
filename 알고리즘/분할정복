@@ -9,6 +9,6 @@
   (2) 차이점
     (가) dp는 하위 문제에 중복이 일어나고, 분할정복은 중복이 일어나지 않는 경우에 사용
     (나) dp는 bottom-up도 가능, 분할정복은 top-down만 가능
-4. 종류
+4. 예시
   (1) 퀵 정렬 : 기준 원소 정해서 좌우 분할 --> 왼쪽 오른쪽 리스트 재귀적으로 반환
     (가) 참조       https://velog.io/@hyejiseo-dev/Python-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B6%84%ED%95%A0%EC%A0%95%EB%B3%B5-%ED%80%B5%EC%A0%95%EB%A0%AC
