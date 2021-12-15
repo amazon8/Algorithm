@@ -8,7 +8,7 @@ def divide(row, col, size):
     for cols in range(col, col+size):
       if size != 3:
         n_size = size//3
-        divide(row, col, n_size)
+        divide(row, col, n_size) 
         divide(row, col+n_size, n_size)
         divide(row, col+2*n_size, n_size)
         divide(row+n_size, col, n_size)
@@ -28,8 +28,8 @@ def divide(row, col, size):
         array[row+2][col+2] = "*"
 
 divide(0, 0, size)
+
 for row in range(size):
   for col in range(size):
     print(array[row][col], end = '')
   print()
-  
