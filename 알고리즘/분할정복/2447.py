@@ -1,3 +1,5 @@
+import sys
+
 size = int(input())
 n_size = 0
 array = [[" " for col in range(size)]for row in range(size)]
@@ -28,8 +30,12 @@ def divide(row, col, size):
         array[row+2][col+2] = "*"
 
 divide(0, 0, size)
-
+print = sys.stdout.write
+for row in range(size):
+  print(''.join(array[row])+"\n")
+'''
 for row in range(size):
   for col in range(size):
     print(array[row][col], end = '')
   print()
+'''
