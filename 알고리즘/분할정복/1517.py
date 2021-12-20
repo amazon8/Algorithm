@@ -10,7 +10,6 @@ arr = list(map(int, input().split()))
 left = []
 right = []
 swap_c = 0; mid = 0
-final_array = []
 
 # 분할 함수
 def split(array):
