@@ -1,3 +1,11 @@
+'''
+1. 버블정렬 풀이
+  recursion error가 표시됨,,, 재귀오류가 왜 일어나는 걸까,,?
+--> 시간복잡도가 1초보다 훨씬 초과 됨, 대략적으로는 시간을 측정하고 알고리즘 방향을 결정해야 할듯
+2. 병합 정렬 알고리즘 --> 메모리 초과,, 흠,,
+3. 병합 정렬에서 리턴 값 없앤 풀이!
+4. 참조 : https://jokerldg.github.io/algorithm/2021/09/12/bubble-sort.html
+'''
 num = int(input())
 array = list(map(int, input().split()))
 swap_c = 0
