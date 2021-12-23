@@ -1,13 +1,21 @@
-num = int(input())
-count = [0 for i in range(num+1)]
-count[1] = 9
-if num>=2:
-  count[2] = 17
+'''
+♨ dp에서는 반복되는 부분이 무엇인지 정확히 파악하기
+'''
 
-# num까지 개수 채워가기
-for now in range(3, num+1):
-  count[now] = (count[now-1]-2)*2+2
+length = int(input())
+num = [[0 for col in range(10)]for row in range(102)]
+num[1] = [0, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 
-print(count[num]%1000000000)
 
-2개만 빠지는 게 아니라 더 많이 빠짐
+# 끝에 따라 개수 채워가기
+for now_length in range(2, length+1):
+  for now_end in range(10):
+    if now_end == 0:
+      num[now_length][now_end] = num[now_length-1][1]
+    elif now_end ==9:
+      num[now_length][now_end] = num[now_length-1][8]
+    else:
+      num[now_length][now_end] = num[now_length-1][now_end-1]+num[now_length-1][now_end+1]
+
+
+print(sum(num[length])%1000000000)
