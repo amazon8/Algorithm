@@ -13,6 +13,7 @@ while start <= end :
   for now_length in lan:
     nums += now_length // mid
   
+  print("nums:{}, need_lan:{}, mid:{}, start:{}, end:{}".format(nums, need_lan, mid, start, end))
   if nums >= need_lan:
     start = mid+1
   else:
