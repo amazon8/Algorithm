@@ -1,9 +1,13 @@
+'''
+1. 이진탐색으로 탐색 해야 할 것이 차이임을 인식하지 못함,,,
+♨ 이진 탐색에서 stat, end가 무엇을 의미하는지 정확히 파악!!
+'''
 home_num, wifi_num = map(int, input().split())
 spot = []
 for i in range(home_num):
   spot.append(int(input()))
 spot.sort()
-start = spot[1] - spot[0]
+start = 1
 end = spot[-1] - spot[0]
 
 
