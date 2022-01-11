@@ -3,5 +3,6 @@
   (2) 선형구조 - 순차탐색, 비선형구조 - BFS, DFS
   (3) dfs(depth-first search)
     (가) 리스트(스택)에 마지막 원소부터 탐색
+    (나) deque, set을 쓰는 이유: https://velog.io/@_3juhwan/Python%EC%9C%BC%EB%A1%9C-DFS-BFS-%EA%B5%AC%ED%98%84
   (4) bfs(breath-first search)
     (가) 리스트(스택)에 처음 원소부터 탐색

@@ -1,4 +1,4 @@
-
+from collections import deque
 
 vertex_num, edge_num, start_node = map(int, input().split())
 
@@ -13,30 +13,30 @@ for i in range(edge_num):
 
 def dfs(graph, start_node):
 
-  stack = []
-  visit = []
+  stack = list()
+  visit = set()
 
   stack.append(start_node)
 
   while stack:
     node = stack.pop()
     while node not in visit:
-      visit.append(node)
-      stack.extend(graph[node])
+      visit.add(node)
+      stack.append(graph[node])
 
   return visit
 
 def bfs(graph, start_node):
 
-  stack = []
-  visit = []
+  stack = deque()
+  visit = set()
 
   stack.append(start_node)
 
   while stack:
-    node = stack.pop(0)
+    node = stack.leftpop()
     if node not in visit:
-      visit.append(node)
+      visit.add(node)
       stack.extend(graph[node])
 
   return visit
