@@ -11,8 +11,6 @@ for i in range(edge_num):
   graph[key_1].sort(reverse = True)
   graph[key_2].sort(reverse = True)
 
-
-
 def dfs(graph, start_node):
 
   stack = []
@@ -28,5 +26,30 @@ def dfs(graph, start_node):
 
   return visit
 
-result = dfs(graph, start_node)
-print(result)  
+def bfs(graph, start_node):
+
+  stack = []
+  visit = []
+
+  stack.append(start_node)
+
+  while stack:
+    node = stack.pop(0)
+    if node not in visit:
+      visit.append(node)
+      stack.extend(graph[node])
+
+  return visit
+
+
+
+dfs_res = dfs(graph, start_node)
+for row in range(len(graph)):
+  graph[row].sort()
+bfs_res = bfs(graph, start_node)
+
+for index in range(len(dfs_res)):
+  print(dfs_res[index], end = ' ')
+print()
+for index in range(len(bfs_res)):
+  print(bfs_res[index], end = ' ')  
