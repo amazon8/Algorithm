@@ -13,40 +13,43 @@ for i in range(edge_num):
 
 def dfs(graph, start_node):
 
-  stack = list()
-  visit = set()
+  stack = []
+  visit = []
 
   stack.append(start_node)
 
   while stack:
     node = stack.pop()
     while node not in visit:
-      visit.add(node)
-      stack.append(graph[node])
+      visit.append(node)
+      
+      temp_stack = list((set(graph[node])-set(visit)))
+      temp_stack.sort(reverse=True)
+      stack.extend(temp_stack)
 
   return visit
 
 def bfs(graph, start_node):
 
   stack = deque()
-  visit = set()
+  visit = []
 
   stack.append(start_node)
 
   while stack:
-    node = stack.leftpop()
+    node = stack.popleft()
     if node not in visit:
-      visit.add(node)
+      visit.append(node)
       stack.extend(graph[node])
 
   return visit
-
 
 
 dfs_res = dfs(graph, start_node)
 for row in range(len(graph)):
   graph[row].sort()
 bfs_res = bfs(graph, start_node)
+
 
 for index in range(len(dfs_res)):
   print(dfs_res[index], end = ' ')
