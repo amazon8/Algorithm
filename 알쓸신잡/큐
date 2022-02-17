@@ -1,12 +1,12 @@
 1. 스택
   (1) 마지막에 넣은 메모리가 처음으로 반환되도록 설계한 메모리 구조
-    (가) LIFO(last in first out)
-  (2) 입력: append()
+    (가) LIFO(last in first out) - 후입선출
+  (2) 입력: push() --> 파이썬: append()
       출력: pop()
 
 2. 큐(que)
   (1) 먼저 넣은 데이터가 먼저 반환되도록 설계한 메모리 구조
-    (가) FIFO(first in first out)
+    (가) FIFO(first in first out) - 선입선출
   (2) 입력: append()
       출력: pop(0)
 
